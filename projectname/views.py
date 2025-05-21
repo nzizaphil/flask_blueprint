@@ -1,10 +1,10 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint('main', __name__)
 
 @bp.route('/')
 def index():
-    return '<h1 style="color:red;">Hello World!</h1>'  # This is the main page of the web application
+    return render_template('index.html')  # This is the main page of the web application
 
 @bp.route('/secret')
 def secret():
